@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+    <h1 >{{todo.title}} </h1>
+    <p>{{todo.body}} </p>
+    <p>{{todo.time}} </p>
+    <p>{{todo.author}} </p>
+    <a href="{% url 'todo_edit' todo.pk %} "><button>Edit </button></a>
+    <a href="{% url 'todo_delete' todo.pk %} "><button>Delete </button></a>
+    <a href="{% url 'home'  %}">back home</a>
+{% endblock content %}
